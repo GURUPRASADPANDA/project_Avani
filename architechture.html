@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AVANI - Architecture</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      background-color: #f4f4f9;
+    }
+
+    .container {
+      display: flex;
+      width: 100%;
+      height: 100vh;
+    }
+
+    .sidebar {
+      width: 250px;
+      background-color: #2c3e50;
+      color: white;
+      padding: 20px;
+      box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .sidebar img {
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
+
+    .menu-item {
+      display: block;
+      padding: 10px;
+      margin-bottom: 10px;
+      text-decoration: none;
+      color: white;
+      font-size: 16px;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    .menu-item:hover {
+      background-color: #34495e;
+    }
+
+    .icon {
+      margin-right: 10px;
+    }
+
+    .content {
+      flex: 1;
+      padding: 20px;
+      overflow-y: auto;
+    }
+
+    .card {
+      margin-top: 20px;
+      padding: 20px;
+      background: white;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .spinner {
+      border: 4px solid #f3f3f3;
+      border-top: 4px solid #3498db;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      animation: spin 1s linear infinite;
+      margin: 0 auto;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      margin-top: 10px;
+      border-radius: 5px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      background-color: #4CAF50;
+      color: white;
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <img src="logo.png" alt="AVANI Logo">
+      <a href="overview.html" class="menu-item"><span class="icon">📄</span>Overview</a>
+      <a href="sensorsdata.html" class="menu-item"><span class="icon">📡</span>Sensors Data</a>
+      <a href="reports.html" class="menu-item"><span class="icon">📑</span>Report</a>
+      <a href="architechture.html" class="menu-item"><span class="icon">📑</span>Architecture</a>
+      <a href="contact.html" class="menu-item"><span class="icon">💬</span>Contact Us</a>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+      <h1>Architecture</h1>
+      <p>Click the button below to view a random architecture image.</p>
+      <button id="showImageBtn">Show Architecture</button>
+      <div id="imageCard" class="card">
+        <div id="spinner" class="spinner"></div>
+        <img id="randomImage" src="" alt="Architecture" style="display: none;">
+        <p id="errorMessage" style="color: red; display: none;">Failed to load image. Please try again.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const images = [
+      "images/d1.jpg",
+      "images/d2.jpeg",
+      "images/d3.jpeg",
+      "images/d4.jpeg",
+      "images/d5.jpeg"
+    ];
+
+    document.getElementById("showImageBtn").addEventListener("click", () => {
+      const spinner = document.getElementById("spinner");
+      const randomImage = document.getElementById("randomImage");
+      const errorMessage = document.getElementById("errorMessage");
+
+      // Reset UI
+      spinner.style.display = "block";
+      randomImage.style.display = "none";
+      errorMessage.style.display = "none";
+
+      // Simulate a 5-second delay before showing the image
+      setTimeout(() => {
+        const randomIndex = Math.floor(Math.random() * images.length);
+        randomImage.src = images[randomIndex];
+
+        // Handle successful load
+        randomImage.onload = () => {
+          spinner.style.display = "none";
+          randomImage.style.display = "block";
+        };
+
+        // Handle error
+        randomImage.onerror = () => {
+          spinner.style.display = "none";
+          errorMessage.style.display = "block";
+        };
+      }, 5000);
+    });
+  </script>
+</body>
+</html>

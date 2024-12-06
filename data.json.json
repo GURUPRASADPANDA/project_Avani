@@ -1,0 +1,126 @@
+{
+  "topicFilter": "sensor/data",
+  "qos": 0,
+  "messages": [
+    {
+      "format": "json",
+      "topic": "sensor/data",
+      "timestamp": 1733517195268,
+      "payload": {
+        "temperature": 30,
+        "humidity": 62,
+        "airQuality": 16,
+        "soilMoisture": 100
+      },
+      "qos": 0
+    },
+    {
+      "format": "json",
+      "topic": "sensor/data",
+      "timestamp": 1733517190236,
+      "payload": {
+        "temperature": 30,
+        "humidity": 63,
+        "airQuality": 16,
+        "soilMoisture": 100
+      },
+      "qos": 0
+    },
+    {
+      "format": "json",
+      "topic": "sensor/data",
+      "timestamp": 1733517184663,
+      "payload": {
+        "temperature": 30,
+        "humidity": 63,
+        "airQuality": 16,
+        "soilMoisture": 100
+      },
+      "qos": 0
+    },
+    {
+      "format": "json",
+      "topic": "sensor/data",
+      "timestamp": 1733517179655,
+      "payload": {
+        "temperature": 30.1,
+        "humidity": 62,
+        "airQuality": 16,
+        "soilMoisture": 100
+      },
+      "qos": 0
+    },
+    {
+      "format": "json",
+      "topic": "sensor/data",
+      "timestamp": 1733517174633,
+      "payload": {
+        "temperature": 30.1,
+        "humidity": 62,
+        "airQuality": 16,
+        "soilMoisture": 100
+      },
+      "qos": 0
+    },
+    {
+      "format": "json",
+      "topic": "sensor/data",
+      "timestamp": 1733517169565,
+      "payload": {
+        "temperature": 30.1,
+        "humidity": 63,
+        "airQuality": 16,
+        "soilMoisture": 100
+      },
+      "qos": 0
+    },
+    {
+      "format": "json",
+      "topic": "sensor/data",
+      "timestamp": 1733517164515,
+      "payload": {
+        "temperature": 30.1,
+        "humidity": 63,
+        "airQuality": 16,
+        "soilMoisture": 100
+      },
+      "qos": 0
+    },
+    {
+      "format": "json",
+      "topic": "sensor/data",
+      "timestamp": 1733517159466,
+      "payload": {
+        "temperature": 30.1,
+        "humidity": 63,
+        "airQuality": 16,
+        "soilMoisture": 100
+      },
+      "qos": 0
+    },
+    {
+      "format": "json",
+      "topic": "sensor/data",
+      "timestamp": 1733517154453,
+      "payload": {
+        "temperature": 30.1,
+        "humidity": 62,
+        "airQuality": 16,
+        "soilMoisture": 100
+      },
+      "qos": 0
+    },
+    {
+      "format": "json",
+      "topic": "sensor/data",
+      "timestamp": 1733517149426,
+      "payload": {
+        "temperature": 30.1,
+        "humidity": 63,
+        "airQuality": 15,
+        "soilMoisture": 100
+      },
+      "qos": 0
+    }
+  ]
+}
