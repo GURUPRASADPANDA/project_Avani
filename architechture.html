@@ -110,7 +110,7 @@
 </head>
 <body>
   <div class="container">
-    <!-- Sidebar -->
+   
     <div class="sidebar">
       <img src="logo.png" alt="AVANI Logo">
       <a href="overview.html" class="menu-item"><span class="icon">📄</span>Overview</a>
@@ -120,10 +120,10 @@
       <a href="contact.html" class="menu-item"><span class="icon">💬</span>Contact Us</a>
     </div>
 
-    <!-- Content -->
+    
     <div class="content">
       <h1>Architecture</h1>
-      <p>Click the button below to view a random architecture image.</p>
+      <p>Click the button below to view the rough architecture.</p>
       <button id="showImageBtn">Show Architecture</button>
       <div id="imageCard" class="card">
         <div id="spinner" class="spinner"></div>
@@ -147,23 +147,23 @@
       const randomImage = document.getElementById("randomImage");
       const errorMessage = document.getElementById("errorMessage");
 
-      // Reset UI
+      
       spinner.style.display = "block";
       randomImage.style.display = "none";
       errorMessage.style.display = "none";
 
-      // Simulate a 5-second delay before showing the image
+      
       setTimeout(() => {
         const randomIndex = Math.floor(Math.random() * images.length);
         randomImage.src = images[randomIndex];
 
-        // Handle successful load
+        
         randomImage.onload = () => {
           spinner.style.display = "none";
           randomImage.style.display = "block";
         };
 
-        // Handle error
+        
         randomImage.onerror = () => {
           spinner.style.display = "none";
           errorMessage.style.display = "block";
